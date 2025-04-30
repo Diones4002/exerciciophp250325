@@ -20,14 +20,12 @@ function retornarFatorPorcentagemDesconto($salarioBruto)
 
 function CalcDesconto($salario, $porcDesc)
 {
-    $porcDesc = $porcDesc / 100;
-    return $salario * $porcDesc;
+    return $salario * ($porcDesc / 100);
 }
 
 function CalcSalarioLiquido($salario, $porcDesc)
 {
-    $porcDesc = $porcDesc / 100;
-    return $salario - ($salario * $porcDesc);
+    return $salario - ($porcDesc / 100);
 }
 
 $porcDesc = retornarFatorPorcentagemDesconto($salarioBruto);
